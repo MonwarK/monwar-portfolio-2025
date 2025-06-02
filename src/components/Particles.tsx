@@ -155,7 +155,7 @@ export default function Particles() {
                   stroke="rgba(34, 197, 94, 0.3)"
                   strokeWidth="1"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.5 - distance / 400 }}
+                  animate={{ opacity: 0.3 - distance / 400 }}
                 />
               );
             }
@@ -163,6 +163,25 @@ export default function Particles() {
           });
         })}
       </svg>
+
+      {/* Mouse Glow Effect */}
+      <motion.div
+        className="absolute w-96 h-96 rounded-full pointer-events-none"
+        style={{
+          left: mousePosition.x - 192,
+          top: mousePosition.y - 192,
+          background:
+            "radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%)",
+        }}
+        animate={{
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
     </div>
   );
 }
