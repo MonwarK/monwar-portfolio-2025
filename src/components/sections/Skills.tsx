@@ -109,28 +109,28 @@ export default function Skills() {
         >
           Skills
         </motion.h2>
-        <div>
+        <div className="space-y-14 md:space-y-0">
           {skills.map((skill, index) => (
-            <div className="h-48 grid grid-cols-3">
+            <motion.div
+              className="md:h-48 grid md:grid-cols-3 gap-8"
+              variants={itemVariants}
+            >
               <div>
                 <h4 className="text-4xl font-bold uppercase text-gray-400">
                   {skill.name}
                 </h4>
               </div>
               <div className="relative col-span-2">
-                <motion.div
-                  className="flex flex-wrap gap-4"
-                  variants={itemVariants}
-                >
+                <div className="flex flex-wrap gap-4">
                   {skill.skills.map((skill) => (
                     <motion.div className="flex items-center bg-blur backdrop-blur-sm rounded-full py-2 px-5 gap-2 cursor-pointer hover:scale-110 delay-100 transition">
                       <img className="w-6" src={skill.icon} alt={skill.name} />
                       <p>{skill.name}</p>
                     </motion.div>
                   ))}
-                </motion.div>
+                </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
