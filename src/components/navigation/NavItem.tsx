@@ -15,7 +15,7 @@ export default function NavItem({ children, ref, activeSection }: Props) {
         "cursor-pointer uppercase font-semibold text-center",
         {
           "text-gray-300 hover:text-gray-300": activeSection,
-          "hover:bg-gray-950 hover:text-gray-400 text-gray-600": !activeSection,
+          "hover:text-gray-400 text-gray-600": !activeSection,
         }
       )}
     >

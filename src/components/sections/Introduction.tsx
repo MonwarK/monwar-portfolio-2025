@@ -5,7 +5,7 @@ import { containerVariants, itemVariants } from "../animations/motionVariants";
 import { socialIcons } from "../../../data/socialLinks";
 
 interface Props {
-  scrollToAbout: () => void;
+  scrollToAbout: any;
 }
 
 export default function Introduction({ scrollToAbout }: Props) {

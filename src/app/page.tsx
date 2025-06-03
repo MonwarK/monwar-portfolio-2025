@@ -25,6 +25,7 @@ export default function Home() {
     contact: contactRef,
   };
 
+  // ObserverAdd commentMore actions
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
@@ -39,13 +40,13 @@ export default function Home() {
         }
       },
       {
-        threshold: 0.5,
+        threshold: 0.5, // fire when 50% of section is visible
       }
     );
 
     Object.entries(refs).forEach(([key, ref]) => {
       if (ref.current) {
-        ref.current.setAttribute("data-section", key); // <-- error comes from here
+        ref.current.setAttribute("data-section", key); // tag the DOM node
         observer.observe(ref.current);
       }
     });

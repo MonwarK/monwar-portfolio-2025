@@ -12,26 +12,27 @@ export default function Navbar({ refs, activeSection }: any) {
   const navigation = [
     {
       name: "Home",
-      ref: refs.homeRef,
+      ref: refs.home,
     },
     {
       name: "About",
-      ref: refs.aboutRef,
+      ref: refs.about,
     },
     {
       name: "Skills",
-      ref: refs.skillsRef,
+      ref: refs.skills,
     },
     {
       name: "Projects",
-      ref: refs.projectsRef,
+      ref: refs.projects,
     },
     {
       name: "Contact",
-      ref: refs.contactRef,
+      ref: refs.contact,
     },
   ];
 
+  console.log(refs);
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
@@ -48,9 +49,7 @@ export default function Navbar({ refs, activeSection }: any) {
                 <NavItem
                   key={item.name}
                   ref={item.ref}
-                  activeSection={
-                    activeSection == `${item.name.toLowerCase()}Ref`
-                  }
+                  activeSection={activeSection == item.name.toLowerCase()}
                 >
                   {item.name}
                 </NavItem>
@@ -72,7 +71,7 @@ export default function Navbar({ refs, activeSection }: any) {
               <StackNavItem
                 key={item.name}
                 ref={item.ref}
-                activeSection={activeSection == `${item.name.toLowerCase()}Ref`}
+                activeSection={activeSection == item.name.toLowerCase()}
               >
                 {item.name}
               </StackNavItem>
