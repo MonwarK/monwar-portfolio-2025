@@ -11,13 +11,20 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   // Refs for sections
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
+  const homeRef = useRef<HTMLDivElement | null>(null);
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+  const skillsRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
 
-  // Observer
+  const refs = {
+    home: homeRef,
+    about: aboutRef,
+    skills: skillsRef,
+    projects: projectsRef,
+    contact: contactRef,
+  };
+
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
@@ -32,13 +39,13 @@ export default function Home() {
         }
       },
       {
-        threshold: 0.5, // fire when 50% of section is visible
+        threshold: 0.5,
       }
     );
 
     Object.entries(refs).forEach(([key, ref]) => {
       if (ref.current) {
-        ref.current.setAttribute("data-section", key); // tag the DOM node
+        ref.current.setAttribute("data-section", key); // <-- error comes from here
         observer.observe(ref.current);
       }
     });
@@ -52,17 +59,15 @@ export default function Home() {
     };
   }, []);
 
-  const refs = { homeRef, aboutRef, skillsRef, projectsRef, contactRef };
-
   return (
     <div>
-      {/* Particle Background */}
+      {/* Particles Background */}
       <Particles />
 
-      {/* Navbar */}
+      {/* Navigation */}
       <Navbar refs={refs} activeSection={activeSection} />
 
-      {/* Introduction */}
+      {/* Introduction/First Screen */}
       <div ref={homeRef}>
         <Introduction
           scrollToAbout={() =>
@@ -71,22 +76,22 @@ export default function Home() {
         />
       </div>
 
-      {/* About Me */}
+      {/* About Section */}
       <div ref={aboutRef}>
         <About />
       </div>
 
-      {/* Skills */}
+      {/* Skills Section */}
       <div ref={skillsRef}>
         <Skills />
       </div>
 
-      {/* Project */}
+      {/* Projects Section */}
       <div ref={projectsRef}>
         <Projects />
       </div>
 
-      {/* Contact */}
+      {/* Contact Section */}
       <div ref={contactRef}>
         <Contact />
       </div>
