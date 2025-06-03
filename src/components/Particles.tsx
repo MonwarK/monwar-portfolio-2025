@@ -115,7 +115,7 @@ export default function Particles() {
         return (
           <motion.div
             key={particle.id}
-            className="absolute rounded-full bg-gradient-to-r from-cyan-400 to-green-400"
+            className="absolute rounded-full bg-white"
             style={{
               left: particle.x,
               top: particle.y,
@@ -152,7 +152,7 @@ export default function Particles() {
                   y1={particle.y}
                   x2={otherParticle.x}
                   y2={otherParticle.y}
-                  stroke="rgba(34, 197, 94, 0.3)"
+                  stroke="rgba(255, 255, 255, 0.3)"
                   strokeWidth="1"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 0.3 - distance / 400 }}
@@ -171,7 +171,7 @@ export default function Particles() {
           left: mousePosition.x - 192,
           top: mousePosition.y - 192,
           background:
-            "radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(100, 100, 100, 0.2) 0%, transparent 70%)",
         }}
         animate={{
           scale: [1, 1.2, 1],
