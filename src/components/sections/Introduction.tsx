@@ -5,7 +5,11 @@ import { ChevronDown, Terminal } from "lucide-react";
 import { containerVariants, itemVariants } from "../animations/motionVariants";
 import { socialIcons } from "../../../data/socialLinks";
 
-export default function Introduction() {
+interface Props {
+  scrollToAbout: () => null;
+}
+
+export default function Introduction({ scrollToAbout }: Props) {
   return (
     <motion.section
       key="home"
@@ -60,7 +64,11 @@ export default function Introduction() {
           ))}
         </motion.div>
 
-        <motion.div className="animate-bounce" variants={itemVariants}>
+        <motion.div
+          onClick={scrollToAbout}
+          className="animate-bounce cursor-pointer"
+          variants={itemVariants}
+        >
           <ChevronDown className="w-8 h-8 mx-auto text-gray-400" />
         </motion.div>
       </div>

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <motion.section
-      className="py-20 relative z-10"
+      className="py-40 relative z-10 min-h-[70vh]"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

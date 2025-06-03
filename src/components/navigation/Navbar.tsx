@@ -6,10 +6,31 @@ import { openAnimation } from "../animations/openAnimation";
 import StackNavItem from "./StackNavItem";
 import NavItem from "./NavItem";
 
-const navigation = ["Home", "About", "Projects", "Contact"];
-
-export default function Navbar() {
+export default function Navbar({ refs, activeSection }: any) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigation = [
+    {
+      name: "Home",
+      ref: refs.homeRef,
+    },
+    {
+      name: "About",
+      ref: refs.aboutRef,
+    },
+    {
+      name: "Skills",
+      ref: refs.skillsRef,
+    },
+    {
+      name: "Projects",
+      ref: refs.projectsRef,
+    },
+    {
+      name: "Contact",
+      ref: refs.contactRef,
+    },
+  ];
 
   const toggleOpen = () => setIsOpen(!isOpen);
 
@@ -24,7 +45,15 @@ export default function Navbar() {
           <div>
             <div className="lg:flex space-x-5 hidden">
               {navigation.map((item) => (
-                <NavItem key={item}>{item}</NavItem>
+                <NavItem
+                  key={item.name}
+                  ref={item.ref}
+                  activeSection={
+                    activeSection == `${item.name.toLowerCase()}Ref`
+                  }
+                >
+                  {item.name}
+                </NavItem>
               ))}
             </div>
             <div className="lg:hidden cursor-pointer" onClick={toggleOpen}>
@@ -40,7 +69,13 @@ export default function Navbar() {
         >
           <div className="pt-10">
             {navigation.map((item) => (
-              <StackNavItem key={item}>{item}</StackNavItem>
+              <StackNavItem
+                key={item.name}
+                ref={item.ref}
+                activeSection={activeSection == `${item.name.toLowerCase()}Ref`}
+              >
+                {item.name}
+              </StackNavItem>
             ))}
           </div>
         </motion.div>
