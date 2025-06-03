@@ -23,8 +23,9 @@ export default function About() {
           <motion.div variants={itemVariants}>
             <div className="text-gray-300 text-lg leading-relaxed space-y-4">
               <p>
-                Hi, I'm Monwar — a Software Developer with a strong interest in
-                building sleek, performant web and mobile applications.
+                Hi, I&apos;m Monwar — a Software Developer with a strong
+                interest in building sleek, performant web and mobile
+                applications.
               </p>
               <p>
                 I recently completed my BSc in Computer Science with Software
@@ -34,11 +35,11 @@ export default function About() {
                 modern tech like React, React Native, .NET, and Next.js.
               </p>
               <p>
-                I’m passionate about crafting smooth user experiences, learning
-                new frameworks, and writing clean, maintainable code. Whether
-                it's building dashboards, mobile apps, or full-stack platforms,
-                I enjoy solving problems through code and bringing ideas to
-                life. Let’s build something great.
+                I&apos;m passionate about crafting smooth user experiences,
+                learning new frameworks, and writing clean, maintainable code.
+                Whether it&apos;s building dashboards, mobile apps, or
+                full-stack platforms, I enjoy solving problems through code and
+                bringing ideas to life. Let&apos;s build something great.
               </p>
             </div>
           </motion.div>
