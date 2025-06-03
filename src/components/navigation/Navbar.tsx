@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed flex justify-center z-50 p-5 w-full">
-      <div className="bg-blur py-4 px-8 rounded-xl w-full max-w-6xl">
+      <div className="bg-blur backdrop-blur-sm py-4 px-8 rounded-xl w-full max-w-6xl">
         <div className="flex justify-between items-center">
           <div className="uppercase font-semibold tracking-wider text-gray-300">
             Monwar

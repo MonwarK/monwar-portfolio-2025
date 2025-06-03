@@ -171,7 +171,7 @@ export default function Particles() {
           left: mousePosition.x - 192,
           top: mousePosition.y - 192,
           background:
-            "radial-gradient(circle, rgba(100, 100, 100, 0.2) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(150, 150, 150, 0.2) 0%, transparent 70%)",
         }}
         animate={{
           scale: [1, 1.2, 1],

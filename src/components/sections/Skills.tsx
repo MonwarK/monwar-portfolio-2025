@@ -123,7 +123,7 @@ export default function Skills() {
                   variants={itemVariants}
                 >
                   {skill.skills.map((skill) => (
-                    <motion.div className="flex items-center bg-blur rounded-full py-2 px-5 gap-2 cursor-pointer hover:scale-110 delay-100 transition">
+                    <motion.div className="flex items-center bg-blur backdrop-blur-sm rounded-full py-2 px-5 gap-2 cursor-pointer hover:scale-110 delay-100 transition">
                       <img className="w-6" src={skill.icon} alt={skill.name} />
                       <p>{skill.name}</p>
                     </motion.div>
