@@ -1,38 +1,8 @@
 import React from "react";
 import { containerVariants, itemVariants } from "../animations/motionVariants";
 import { motion } from "framer-motion";
-import { Code, Database, ExternalLink, Globe, Smartphone } from "lucide-react";
-
-const projects = [
-  {
-    title: "Project 1",
-    tech: ["React", "TailwindCSS"],
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam provident ipsum fugit itaque eius ut quos optio voluptates!",
-    icon: <Database className="w-6 h-6" />,
-  },
-  {
-    title: "Project 2",
-    tech: ["React", "TailwindCSS"],
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam provident ipsum fugit itaque eius ut quos optio voluptates!",
-    icon: <Database className="w-6 h-6" />,
-  },
-  {
-    title: "Project 3",
-    tech: ["React", "TailwindCSS"],
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam provident ipsum fugit itaque eius ut quos optio voluptates!",
-    icon: <Database className="w-6 h-6" />,
-  },
-  {
-    title: "Project 4",
-    tech: ["React", "TailwindCSS"],
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam provident ipsum fugit itaque eius ut quos optio voluptates!",
-    icon: <Database className="w-6 h-6" />,
-  },
-];
+import { ExternalLink } from "lucide-react";
+import { projects } from "../../../data/projects";
 
 export default function Projects() {
   return (
@@ -52,7 +22,7 @@ export default function Projects() {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:shadow-lg shadow-white-500 transition-colors group"

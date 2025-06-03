@@ -1,97 +1,7 @@
 import React from "react";
 import { containerVariants, itemVariants } from "../animations/motionVariants";
 import { motion } from "framer-motion";
-
-const skills = [
-  {
-    name: "Frontend",
-    skills: [
-      {
-        name: "React",
-        icon: "https://cdn.simpleicons.org/react",
-      },
-      {
-        name: "NextJs",
-        icon: "https://cdn.simpleicons.org/nextdotjs/white",
-      },
-      {
-        name: "React Native",
-        icon: "https://cdn.simpleicons.org/react/blue",
-      },
-      {
-        name: "TypeScript",
-        icon: "https://cdn.simpleicons.org/typescript",
-      },
-      {
-        name: "TailwindCSS",
-        icon: "https://cdn.simpleicons.org/tailwindcss",
-      },
-      {
-        name: "Motion",
-        icon: "https://cdn.simpleicons.org/framer",
-      },
-    ],
-  },
-  {
-    name: "Backend",
-    skills: [
-      {
-        name: "NodeJS",
-        icon: "https://cdn.simpleicons.org/nodedotjs",
-      },
-      {
-        name: ".NET",
-        icon: "https://cdn.simpleicons.org/dotnet",
-      },
-      {
-        name: "Firebase",
-        icon: "https://cdn.simpleicons.org/firebase",
-      },
-      {
-        name: "Supabase",
-        icon: "https://cdn.simpleicons.org/supabase",
-      },
-      {
-        name: "Clerk",
-        icon: "https://cdn.simpleicons.org/clerk",
-      },
-    ],
-  },
-  {
-    name: "Databases",
-    skills: [
-      {
-        name: "MongoDB",
-        icon: "https://cdn.simpleicons.org/mongodb",
-      },
-      {
-        name: "PostgreSQL",
-        icon: "https://cdn.simpleicons.org/postgresql",
-      },
-    ],
-  },
-  {
-    name: "Other",
-    skills: [
-      {
-        name: "Stripe",
-        icon: "https://cdn.simpleicons.org/stripe",
-      },
-      {
-        name: "Git",
-        icon: "https://cdn.simpleicons.org/git",
-      },
-      {
-        name: "C#",
-        icon: "https://cdn.simpleicons.org/c",
-      },
-      {
-        name: "Sanity",
-        icon: "https://cdn.simpleicons.org/sanity",
-      },
-    ],
-  },
-];
+import { skills } from "../../../data/skills";
 
 export default function Skills() {
   return (
@@ -112,6 +22,7 @@ export default function Skills() {
         <div className="space-y-14 md:space-y-0">
           {skills.map((skill, index) => (
             <motion.div
+              key={skill.name}
               className="md:h-48 grid md:grid-cols-3 gap-8"
               variants={itemVariants}
             >
@@ -123,7 +34,10 @@ export default function Skills() {
               <div className="relative col-span-2">
                 <div className="flex flex-wrap gap-4">
                   {skill.skills.map((skill) => (
-                    <motion.div className="flex items-center bg-blur backdrop-blur-sm rounded-full py-2 px-5 gap-2 cursor-pointer hover:scale-110 delay-100 transition">
+                    <motion.div
+                      key={skill.name}
+                      className="flex items-center bg-blur backdrop-blur-sm rounded-full py-2 px-5 gap-2 cursor-pointer hover:scale-110 delay-100 transition"
+                    >
                       <img className="w-6" src={skill.icon} alt={skill.name} />
                       <p>{skill.name}</p>
                     </motion.div>

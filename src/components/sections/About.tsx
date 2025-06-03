@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <motion.section
-      className="py-40 relative z-10 min-h-[70vh]"
+      className="py-40 relative z-10 min-h-[60vh]"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -21,9 +21,6 @@ export default function About() {
 
         <div className="grid gap-16">
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-6 text-cyan-400">
-              Background
-            </h3>
             <div className="text-gray-300 text-lg leading-relaxed space-y-4">
               <p>
                 Hi, I'm Monwar — a Software Developer with a strong interest in

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { motion } from "framer-motion";
 import { ChevronDown, Terminal } from "lucide-react";
 import { containerVariants, itemVariants } from "../animations/motionVariants";
