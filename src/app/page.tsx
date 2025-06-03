@@ -4,6 +4,7 @@ import Navbar from "@/components/navigation/Navbar";
 import Particles from "@/components/Particles";
 import About from "@/components/sections/About";
 import Introduction from "@/components/sections/Introduction";
+import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* About Me */}
       <About />
+
+      {/* Skills */}
+      <Skills />
     </div>
   );
 }
