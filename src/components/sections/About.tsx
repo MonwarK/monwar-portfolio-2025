@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <motion.section
-      className="py-40 relative z-10 min-h-[60vh]"
+      className="py-40 relative z-10 min-h-screen"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2

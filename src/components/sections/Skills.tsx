@@ -10,7 +10,7 @@ export default function Skills() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2

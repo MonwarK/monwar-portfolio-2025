@@ -26,7 +26,7 @@ body {
 }
 
 .bg-blur {
-  background: rgba(13, 12, 29, 0.2);
-  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+  background: rgba(13, 12, 29, 0.4);
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
