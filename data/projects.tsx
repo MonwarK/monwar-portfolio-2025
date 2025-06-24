@@ -3,19 +3,20 @@ import { Database, ExternalLink, Github, Languages, Tv } from "lucide-react";
 export const projects = [
   {
     title: "CineWave",
-    thumbnail: "https://i.ibb.co/pBKXRmhG/image.png",
+    thumbnail: "https://i.ibb.co/GvdRJs7r/Untitled-1.jpg",
     tech: [
       "Next.js",
       "TailwindCSS",
       "TypeScript",
       "Clerk",
+      "Supabase",
       "Stripe",
       "TMDB API",
       "Framer Motion",
       "Vercel",
     ],
     description:
-      "CineWave is a fully responsive, Netflix-inspired web application built with Next.js, Tailwind CSS, and TypeScript. It allows users to sign up or log in securely with Clerk, explore trending movies and shows using data from the TMDB API, and manage subscriptions through Stripe for access to premium features. Users can browse by genre, search titles, and view detailed movie pages with trailers and descriptions. The app includes smooth transitions via Framer Motion and is deployed on Vercel for fast, global performance.",
+      "CineWave is a fully responsive, Netflix-inspired streaming web application built with Next.js, Tailwind CSS, and TypeScript. Users can securely sign up or log in using Clerk, explore trending and popular titles via the TMDB API, and unlock premium features through Stripe-powered subscriptions. CineWave integrates video APIs to deliver access to thousands of movies and TV shows, with support for genre-based browsing, title search, and detailed movie pages featuring trailers and metadata. Smooth transitions are handled with Framer Motion, and the app is deployed on Vercel for fast, scalable performance.",
     icon: <Tv className="w-6 h-6" />,
     link: [
       {
