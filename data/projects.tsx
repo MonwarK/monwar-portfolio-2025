@@ -3,7 +3,7 @@ import { Database, ExternalLink, Github, Languages, Tv } from "lucide-react";
 export const projects = [
   {
     title: "CineWave",
-    thumbnail: "https://i.ibb.co/GvdRJs7r/Untitled-1.jpg",
+    thumbnail: "https://i.ibb.co/pvF61R3Y/cinewave-thumbnail.jpg",
     tech: [
       "Next.js",
       "TailwindCSS",
